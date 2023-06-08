@@ -1,4 +1,4 @@
-# substretch
+# Subtitle Stretcher
 This is a Python script using Python 3.11.1 that I wrote that simply takes a seconds offset and a ratio to change the speed at which subtitles in SRT files play to the time that was given. 
 
 ## THE PROBLEM
