@@ -7,8 +7,11 @@ In certain old films that I would watch, there was an issue where the subtitles 
 ## THE SOLUTION
 Rather than manually add the times, I thought it would be better to instead write a script that adjusts the times by the approximate amount. I wrote a Python script that looks for timestamps on a line and adjusts them based off a given ratio and seconds offset. These times are calculated via taking the time of where the very first sub should play and the time where the very last sub should play in the modified video you are watching. Given that the only difference in the video that the original SRT file is that the video plays at a different speed, we can calculate the seconds offset and the speed difference to adjust the subs using these formulas:
 OLD TIME RUN = OLD END TIME - OLD START TIME
+
 NEW TIME RUN = NEW END TIME - NEW START TIME
+
 SPEED RATIO = NEW TIME RUN / OLD TIME RUN
+
 SECONDS OFFSET = NEW TIME RUN - (OLD TIME RUN * SPEED RATIO) 
 
 With seconds offset & speed difference we can then apply these numbers against the subtitle times:
